@@ -1,6 +1,12 @@
-// index.tsx
-import styles from "./index.module.scss";
+// src/components/Header/index.tsx
+import { devDependencies } from "../../../package.json";
 
-export const Header = () => {
-  return <p className={styles.header}>This is Header</p>;
+export function Header() {
+  return (
+    <div className="p-20px text-center">
+      <h1 className="font-bold text-2xl mb-2">
+        vite version: {devDependencies.vite}
+      </h1>
+    </div>
+  );
 }
