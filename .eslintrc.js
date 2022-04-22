@@ -6,6 +6,7 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
+		'plugin:react/jsx-runtime',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     // 1. 接入 prettier 的规则
@@ -27,6 +28,21 @@ module.exports = {
     'prettier/prettier': 'error',
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
-    'react/react-in-jsx-scope': 'off'
+    'react/react-in-jsx-scope': 'off',
+    'no-undef': 'off',
+    '@typescript-eslint/no-empty-function': 'off',
+    'no-prototype-builtins': 'off',
+    'no-cond-assign': 'off',
+    'getter-return': 'off',
+    'valid-typeof': 'off',
+    'no-fallthrough': 'off',
+    'no-func-assign': 'off',
+    'no-dupe-keys': 'off',
+    'no-misleading-character-class': 'off',
+    'no-empty': 'off',
+    'no-control-regex': 'off',
+    'no-constant-condition': 'off',
+    'no-misleading-character-class': 'off',
+    'no-useless-escape': 'off'
   }
 };
