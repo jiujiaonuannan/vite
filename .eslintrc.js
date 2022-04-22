@@ -6,7 +6,7 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-		'plugin:react/jsx-runtime',
+    'plugin:react/jsx-runtime',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     // 1. 接入 prettier 的规则
