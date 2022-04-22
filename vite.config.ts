@@ -3,6 +3,8 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import autoprefixer from 'autoprefixer';
 import windi from 'vite-plugin-windicss';
+// vite.config.ts
+import viteEslint from 'vite-plugin-eslint';
 
 // 全局 scss 文件的路径
 // 用 normalizePath 解决 window 下的路径问题
@@ -12,6 +14,7 @@ const variablePath = normalizePath(path.resolve('./src/variable.scss'));
 export default defineConfig({
   plugins: [
     windi(),
+    viteEslint(),
     react({
       babel: {
         // 加入 babel 插件
