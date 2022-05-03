@@ -2,12 +2,20 @@
 import { devDependencies } from '../../../package.json';
 import logoSrc from '@assets/imgs/vite.png';
 import { ReactComponent as ReactLogo } from '@assets/icons/logo.svg';
-import Worker from './example.js?worker';
+// import Worker from './example.js?worker';
+import init from './fib.wasm';
 
-const worker = new Worker();
+// const worker = new Worker();
 
-worker.addEventListener('message', (e) => {
-  console.log(e);
+// worker.addEventListener('message', (e) => {
+//   console.log(e);
+// });
+
+type FibFunc = (num: number) => number;
+
+init({}).then((exports) => {
+  const fibFunc = exports.fib as FibFunc;
+  console.log('Fib result:', fibFunc(10));
 });
 
 export function Header() {
