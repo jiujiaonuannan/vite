@@ -2,6 +2,13 @@
 import { devDependencies } from '../../../package.json';
 import logoSrc from '@assets/imgs/vite.png';
 import { ReactComponent as ReactLogo } from '@assets/icons/logo.svg';
+import Worker from './example.js?worker';
+
+const worker = new Worker();
+
+worker.addEventListener('message', (e) => {
+  console.log(e);
+});
 
 export function Header() {
   return (
