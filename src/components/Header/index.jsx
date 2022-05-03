@@ -1,6 +1,7 @@
 // src/components/Header/index.tsx
 import { devDependencies } from '../../../package.json';
 import logoSrc from '@assets/imgs/vite.png';
+import { ReactComponent as ReactLogo } from '@assets/icons/logo.svg';
 
 export function Header() {
   return (
@@ -9,6 +10,7 @@ export function Header() {
       <h1 className="font-bold text-2xl mb-2">
         vite version: {devDependencies.vite}
       </h1>
+      <ReactLogo />
     </div>
   );
 }

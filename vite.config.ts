@@ -6,6 +6,8 @@ import windi from 'vite-plugin-windicss';
 // vite.config.ts
 import viteEslint from 'vite-plugin-eslint';
 import viteStylelint from '@amatlash/vite-plugin-stylelint';
+// vite.config.ts
+import svgr from 'vite-plugin-svgr';
 
 // 全局 scss 文件的路径
 // 用 normalizePath 解决 window 下的路径问题
@@ -16,6 +18,7 @@ export default defineConfig({
   plugins: [
     windi(),
     viteEslint(),
+    svgr(),
     viteStylelint({
       exclude: /windicss|node_modules/
     }),
