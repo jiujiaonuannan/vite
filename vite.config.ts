@@ -9,12 +9,18 @@ import viteStylelint from '@amatlash/vite-plugin-stylelint';
 // vite.config.ts
 import svgr from 'vite-plugin-svgr';
 
+// 是否为生产环境，在生产环境一般会注入 NODE_ENV 这个环境变量，见下面的环境变量文件配置
+const isProduction = process.env.NODE_ENV === 'production';
+// 填入项目的 CDN 域名地址
+const CDN_URL = 'xxxxxx';
+
 // 全局 scss 文件的路径
 // 用 normalizePath 解决 window 下的路径问题
 const variablePath = normalizePath(path.resolve('./src/variable.scss'));
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: isProduction ? CDN_URL : '/',
   plugins: [
     windi(),
     viteEslint(),

@@ -43,6 +43,9 @@ module.exports = {
     'no-control-regex': 'off',
     'no-constant-condition': 'off',
     'no-misleading-character-class': 'off',
-    'no-useless-escape': 'off'
+    'no-useless-escape': 'off',
+    '@typescript-eslint/no-empty-interface': 'off',
+    'no-redeclare': 'off',
+    '@typescript-eslint/no-this-alias': 'off'
   }
 };
